@@ -13,5 +13,11 @@
 # contentlayer
 /.contentlayer
 
-# yarn
-/.yarn
+# yarn, not using zero-installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
