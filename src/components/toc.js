@@ -37,7 +37,7 @@ export default function TableofContent({ heading }) {
       <Link
         data-level={heading.level}
         href={`#${heading.text}`}
-        className={`"data-[level=two]:ml-1 data-[level=three]:ml-2 leading-9 rounded-lg px-3 py-1 font-normal text-zinc-500 dark:text-zinc-300 hover:bg-zinc-50 hover:text-zinc-900 dark:hover:text-zinc-50 transition duration-300"  ${
+        className={`"data-[level=two]:ml-1 data-[level=three]:ml-2 leading-9 rounded-lg px-3 py-1 font-normal text-zinc-500 dark:text-zinc-300 hover:bg-zinc-50 hover:text-zinc-900 dark:hover:text-zinc-50 dark:hover:bg-zinc-800 transition duration-300"  ${
           highlighted &&
           "bg-zinc-50 text-zinc-900 dark:text-zinc-100 dark:bg-zinc-800"
         }`}

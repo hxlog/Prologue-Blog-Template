@@ -18,7 +18,7 @@ const Comments = () => {
   }, []);
   return (
     <div>
-      <div id="comments" className="my-8 text-center text-sm text-zinc-500 dark:text-zinc-300 rounded-lg py-1 px-2 hover:bg-zinc-100 hover:dark:bg-zinc-800 max-w-fit transform transition duration-300 mx-auto">
+      <div id="comments" className="my-8 text-center text-sm text-zinc-500 dark:text-zinc-300 rounded-lg py-1 px-2 hover:bg-zinc-100 hover:dark:bg-zinc-800 max-w-fit transform transition duration-300 mx-auto select-none">
         {enableLoadComments == false ? (
           <button onClick={LoadComments}>▲ Load Comments</button>
         ) : (

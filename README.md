@@ -12,8 +12,9 @@ Next.js13 + tailwindcss + contentlayer + MDX Blog
 ## Get Started
 
 ```
-pnpm install
+yarn install
 ```
+
 All configurations are in `/data`
 
 ## Configuration
@@ -24,12 +25,11 @@ Post frontmatter
 ---
 title: title
 description: description
+pubDate: 2022-11-13
 (required)
 
-pubDate: 2022-11-13
 updatedDate: 2023-07-02
 tags: ["tag"]
-layout: photo
 image: /static/photos/06.jpg
 (optional)
 ---
@@ -42,7 +42,3 @@ title: title
 description: description
 (required)
 ```
-
-Known Issues:
-
-- App router og card, Chinese fonts cannot be loaded

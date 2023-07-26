@@ -83,10 +83,6 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       default:""
     },
-    layout: {
-      type: "string",
-      default:""
-    },
     draft: {
       type: "boolean",
       default: false,

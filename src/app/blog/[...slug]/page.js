@@ -7,7 +7,7 @@ import ScrollTopAndComment from "../../../components/scroll";
 import TableofContent from "../../../components/toc";
 import Comments from "../../../components/comments";
 import Link from "next/link";
-import { Suspense } from "react";
+import moment from "moment";
 
 async function getPostFromParams(params) {
   const slug = params?.slug?.join("/");
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
       type: "article",
       images: [
         post.image === ""
-          ? { url: `${siteMetadata.ogUrl}${post.title}` }
+          ? { url: `/og?title=${post.title}` }
           : { url: post.image },
       ],
     },
@@ -49,9 +49,7 @@ export async function generateMetadata({ params }) {
       creator: siteMetadata.twitter,
       siteId: siteMetadata.twitterid,
       creatorId: siteMetadata.twitterid,
-      images: [
-        post.image === null ? `${siteMetadata.ogUrl}${post.title}` : post.image,
-      ],
+      images: [post.image === null ? `/og?title=${post.title}` : post.image],
     },
   };
 }
@@ -64,7 +62,7 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }) {
   const post = await getPostFromParams(params);
-  if (!post ||  post.draft === true) {
+  if (!post || post.draft === true) {
     notFound();
   }
   const jsonLd = {
@@ -74,8 +72,8 @@ export default async function PostPage({ params }) {
     headline: post.title,
     image:
       post.image === ""
-        ? [`${siteMetadata.ogUrl}${post.title}`]
-        : [post.image, `${siteMetadata.ogUrl}${post.title}`],
+        ? [`/og?title=${post.title}`]
+        : [post.image, `/og?title=${post.title}`],
     description: post.description,
     author: [
       {
@@ -95,6 +93,10 @@ export default async function PostPage({ params }) {
       </section>
       <div className="relative xl:grid xl:grid-cols-8 gap-8 mx-auto max-w-5xl">
         <article className="col-span-6 py-4 prose mx-auto dark:prose-invert max-w-3xl">
+          <div className="prose-sm select-none">
+            <time>{moment(post.pubDate).format("LL")}</time> ·{" "}
+            {post.readingTime.words} words
+          </div>
           <h1 className="mb-2 py-4 leading-relaxed">{post.title}</h1>
           {post.description && (
             <p className="mt-4 text-slate-700 dark:text-slate-200">
@@ -102,13 +104,16 @@ export default async function PostPage({ params }) {
             </p>
           )}
           <hr className="py-2 pt-2" />
-          <MDXComponent code={post.body.code} layout={post.layout} />
-
+          <MDXComponent code={post.body.code} />
+          <p className="prose-sm">
+            
+            {post.updatedDate ?  `Last Updated: ${moment(post.updatedDate).format("LL")}` : null}
+          </p>
           <hr />
           <Comments />
         </article>
 
-        <div className="col-span-2 mx-auto">
+        <div className="col-span-2 mx-auto select-none">
           <div className="sticky top-0 pt-4">
             <div className="hidden xl:block">
               <h3 className="text-zinc-600 dark:text-zinc-300 py-4">

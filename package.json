@@ -8,16 +8,14 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "pnpm": {
-    "overrides": {
-      "@opentelemetry/api": "1.4.1",
-      "@opentelemetry/core": "1.13.0",
-      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-      "@opentelemetry/resources": "1.13.0",
-      "@opentelemetry/sdk-trace-base": "1.13.0",
-      "@opentelemetry/sdk-trace-node": "1.13.0",
-      "@opentelemetry/semantic-conventions": "1.13.0"
-    }
+  "resolutions": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.13.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+    "@opentelemetry/resources": "1.13.0",
+    "@opentelemetry/sdk-trace-base": "1.13.0",
+    "@opentelemetry/sdk-trace-node": "1.13.0",
+    "@opentelemetry/semantic-conventions": "1.13.0"
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
@@ -26,14 +24,15 @@
     "autoprefixer": "10.4.14",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
-    "eslint": "^8.44.0",
-    "eslint-config-next": "^13.4.9",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.12",
     "fuse.js": "^6.6.2",
+    "katex": "^0.16.8",
     "moment": "^2.29.4",
-    "next": "^13.4.9",
+    "next": "^13.4.12",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
-    "postcss": "^8.4.25",
+    "postcss": "^8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loading-skeleton": "^3.3.1",
@@ -48,10 +47,11 @@
     "remark-preset-lint-consistent": "^5.1.2",
     "rss": "^1.2.2",
     "shiki": "^0.14.3",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "3.3.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "eslint-config-prettier": "^8.8.0"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }

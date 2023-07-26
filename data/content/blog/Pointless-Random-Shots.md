@@ -3,7 +3,6 @@ title: 无意义的随手拍和后期
 pubDate: 2023-6-19
 description: 无意义的废片和后期。
 image: /static/photos/06.jpg
-layout: photo
 ---
 
 ## 雨声淅沥

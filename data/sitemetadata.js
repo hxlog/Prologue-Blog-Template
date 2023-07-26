@@ -1,10 +1,10 @@
 const siteMetadata = {
-  title: "Prologue - 序章",
+  title: "Prologue 序章",
   author: "槐序",
   publishName: "Prologue",
   headerTitle: "What's past is prologue",
   description:
-    "读不完的书和无尽的灵感",
+    "对当下的反思和批判",
   language: "zh",
   keywords:['prologue', '序言'],
   theme: "system",

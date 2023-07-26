@@ -12,3 +12,6 @@
 
 # contentlayer
 /.contentlayer
+
+# yarn
+/.yarn

@@ -36,7 +36,7 @@ export default function Home() {
               </article>
             ))}
           <Link href="/blog" passHref>
-            <p className="text-right text-sm text-zinc-500 hover:text-zinc-900 hover:underline transition duration-300">
+            <p className="text-right text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline transition duration-300">
               Read More →
             </p>
           </Link>
@@ -50,10 +50,10 @@ export default function Home() {
             height="100"
             className="rounded-full max-w-md mx-auto shadow mt-4"
           />
-
-          <p className="py-4 mt-2 text-center">“ 对自我无知的认知即批判和反思 ”</p>
+          <p className="prose-lg text-center pt-6">{siteMetadata.author}</p>
+          <p className="py-4 text-center">“沉迷于自我怀疑和批判的年轻人”</p>
           <Link href="/about" passHref>
-            <p className="text-right text-sm pt-2 text-zinc-500 hover:text-zinc-900 hover:underline transition duration-300">
+            <p className="text-right text-sm pt-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline transition duration-300">
               About More →
             </p>
           </Link>
