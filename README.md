@@ -6,10 +6,6 @@ Next.js13 + tailwindcss + contentlayer + MDX Blog
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FhuaixuOvO%2FPrologue-Blog-Template)
 
-![ogcard](/public/static/images/ogcard.png)
-
-Try now: [https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card](https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card)
-
 ## Features
 
 - Content Focused, contentlayer + md/mdx
@@ -58,9 +54,16 @@ Page frontmatter
 title: title
 description: description
 (required)
+
+## Twitter Card
+
+![ogcard](/public/static/images/ogcard.png)
+
+Try now: [https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card](https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card)
+
 ```
 
-## KnowtnKnown Issues
+## Known Issues
 
 - Cannot return 404 in root layout
 - 无法在 root layout 返回 404
