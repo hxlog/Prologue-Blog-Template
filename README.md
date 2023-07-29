@@ -2,11 +2,11 @@
 
 Next.js13 + tailwindcss + contentlayer + MDX Blog
 
-[cover](/public/static/iamges/cover.png)
+![cover](/public/static/images/cover.png)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FhuaixuOvO%2FPrologue-Blog-Template)
 
-[ogcard](/public/static/iamges/ogcard.png)
+![ogcard](/public/static/images/ogcard.png)
 
 Try now: [https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card](https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card)
 
