@@ -32,6 +32,7 @@ export default function Home() {
                   description={post.description}
                   pubDate={post.pubDate}
                   readingTime={post.readingTime.text}
+                  tags={post.tags}
                 />
               </article>
             ))}
@@ -44,14 +45,13 @@ export default function Home() {
         <div className="col-span-1 max-w-lg mx-auto">
           <h2 className="font-semibold py-4">About Author</h2>
           <Image
-            src="/static/favicons/avatar.png"
+            src={siteMetadata.image}
             alt="Avatar"
             width="100"
             height="100"
             className="rounded-full max-w-md mx-auto shadow mt-4"
           />
           <p className="prose-lg text-center pt-6">{siteMetadata.author}</p>
-          <p className="py-4 text-center">“沉迷于自我怀疑和批判的年轻人”</p>
           <Link href="/about" passHref>
             <p className="text-right text-sm pt-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline transition duration-300">
               About More →

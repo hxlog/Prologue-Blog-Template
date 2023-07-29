@@ -3,7 +3,7 @@ import { compareDesc, format, parseISO } from 'date-fns'
 import PostsLayout from "./bloglistlayout"
 import siteMetadata from "../../../data/sitemetadata"
 
-export default function Home() 
+export default function Blog() 
 {
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.pubDate), new Date(b.pubDate))

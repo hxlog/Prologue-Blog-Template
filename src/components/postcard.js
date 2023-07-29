@@ -7,9 +7,11 @@ export default function PostCard({
   description,
   pubDate,
   readingTime,
+  tags
 }) {
   return (
     <div className="py-4">
+      {tags ==''|| !tags?null:<div className="text-sm text-zinc-500 dark:text-zinc-400">{tags.map(tag => (<Link key={tag} className="px-1 hover:text-zinc-800 dark:hover:text-zinc-200"href={`/tags/${tag}`}>{tag}</Link>))}</div>}
       <Link href={slug} passHref>
         <h3 className="no-underline hover:underline text-xl font-semibold py-2 mt-1">
           {title}

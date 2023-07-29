@@ -30,7 +30,7 @@ const Comments = () => {
           repo={`${siteMetadata.github}/${siteMetadata.siteRepo}`}
           repoId={siteMetadata.repoid}
           category="Announcements"
-          categoryId="DIC_kwDOHl4HGs4CP_Jc"
+          categoryId={siteMetadata.categoryid}
           mapping="pathname"
           reactionsEnabled="1"
           inputPosition="top"
