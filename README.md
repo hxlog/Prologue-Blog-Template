@@ -54,14 +54,12 @@ Page frontmatter
 title: title
 description: description
 (required)
-
+```
 ## Twitter Card
 
 ![ogcard](/public/static/images/ogcard.png)
 
 Try now: [https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card](https://prologue-blog-template.vercel.app/og?title=Twitter/OG%20Card)
-
-```
 
 ## Known Issues
 
